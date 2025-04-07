@@ -25,16 +25,10 @@ function ListPage() {
 
   const [activeItemId, setActiveItemId] = useState<number | null>(null)
 
-  const activeItemText = useMemo(
-    () => (activeItemId !== null && activeItemId !== undefined ? activeItemId : 'Empty'),
-    [activeItemId]
-  )
+  const activeItemText = activeItemId ?? 'Empty'
 
   const handleItemClick = useCallback((id: number) => {
-    if (activeItemId === id) {
-      setActiveItemId(null)
-    }
-    setActiveItemId(id)
+    setActiveItemId(prevId => (prevId === id ? null : id))
   }, [])
 
   return (
