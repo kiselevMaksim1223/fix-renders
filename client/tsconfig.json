@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": "./src",
     "rootDir": "./",
     "outDir": "./dist",
     "esModuleInterop": true,
@@ -24,13 +25,12 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "paths": {
-      "@/": ["./src"],
-      "@api/*": ["./src/api/*"],
-      "@components/*": ["./src/components/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@pages/*": ["./src/pages/*"],
-      "@types": ["./src/types"]
+      "@api/*": ["api/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["hooks/*"],
+      "@utils/*": ["utils/*"],
+      "@pages/*": ["pages/*"],
+      "@types": ["types"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
