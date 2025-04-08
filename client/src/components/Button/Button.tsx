@@ -5,9 +5,9 @@ type Props = {
   children: ReactNode
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = ({ children, ...rest }: Props) => {
+const Button = ({ children, className, ...rest }: Props) => {
   return (
-    <button {...rest} className={styles.button}>
+    <button {...rest} className={`${styles.button} ${className}`}>
       {children}
     </button>
   )

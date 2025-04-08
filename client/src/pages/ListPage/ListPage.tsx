@@ -11,6 +11,7 @@ import { FilterAndSort } from '@components/FilterAndSort'
 import { List } from '@components/List'
 import { ListItem } from '@components/ListItem'
 import fetchItems from '@api/services/fetchItems'
+import { Button } from '@components/Button'
 
 const PER_PAGE = 10
 
@@ -61,7 +62,7 @@ function ListPage() {
             {error && <span>Error: {error}</span>}
           </>
         }
-        listFooter={<>{hasMore && <button onClick={fetchNextPage}>Page: {page}. Load More</button>}</>}
+        listFooter={<>{hasMore && <Button className={styles['list-button']} onClick={fetchNextPage}>Page: {page}. Load Next</Button>}</>}
       />
     </div>
   )

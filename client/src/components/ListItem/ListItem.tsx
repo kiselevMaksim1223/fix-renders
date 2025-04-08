@@ -13,7 +13,7 @@ type Props = {
 
 const ListItem = ({ id, name, description, onClick, isActive }: Props) => {
   return (
-    <li className={isActive ? `${styles['list-item']} ${styles['active']}` : styles['list-item']}>
+    <div className={isActive ? `${styles['list-item']} ${styles['active']}` : styles['list-item']}>
       <Link to={`/${id}`}>
         <div className={styles['list-item-actions']}>
           <div>
@@ -32,7 +32,7 @@ const ListItem = ({ id, name, description, onClick, isActive }: Props) => {
         <div>{name}</div>
         <div className={styles['list-item__description']}>{description}</div>
       </Link>
-    </li>
+    </div>
   )
 }
 
